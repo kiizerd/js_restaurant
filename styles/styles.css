@@ -1,8 +1,35 @@
 body {
-  background-color: coral;
+  background-color: #ff7f50;
+}
+
+#heading {
+  background-color: #FF5A1D;
+}
+
+#heading h3 {
+  margin: 1em 1em 1em 5px;
+  color: black;
 }
 
 #heading-icon {
-  max-width: 20%;
-  display: inline;
+  max-width: 25%;
+  border-radius: 35px;
+  margin: 5px 3px 5px 3px;
+}
+
+.card {
+  margin: 2em 5em 1em 5em;
+  border-radius: 7px;
+}
+
+#info-body {
+  padding: 1em 2em 1em 2em;
+}
+
+#featured-card ul {
+ list-style-type: none;
+}
+
+#featured-card li {
+  margin: 1em 1em 1em 1em;
 }
