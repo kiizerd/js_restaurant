@@ -1,1 +1,4 @@
-alert('I have been exported and imported!!');
+import { getContent } from './displayHome'
+
+getContent()
+

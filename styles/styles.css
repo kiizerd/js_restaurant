@@ -2,16 +2,16 @@ body {
   background-color: #ff7f50;
 }
 
-#heading {
+#header {
   background-color: #FF5A1D;
 }
 
-#heading h3 {
+#header h3 {
   margin: 1em 1em 1em 5px;
   color: black;
 }
 
-#heading-icon {
+#header-icon {
   max-width: 25%;
   border-radius: 35px;
   margin: 5px 3px 5px 3px;
