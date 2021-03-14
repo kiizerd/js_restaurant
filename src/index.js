@@ -1,4 +1,8 @@
-import { getContent } from './displayHome'
+import { getHeader } from './displayHeader'
 
-getContent()
+const content = document.getElementById('content')
+
+const header = getHeader()
+
+content.append(header)
 
