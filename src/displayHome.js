@@ -27,22 +27,28 @@ const Display = (function () {
   function getFeaturedCard() {
     const div = document.createElement('div');
     
-    div.append(getHeader())
+    div.append(getHeader(), getBody())
         
     return div
 
     function getHeader() {
       const header = document.createElement('div')
       header.classList.add('card-header');
-      header.textContent = 'Featured items'
+      header.textContent = 'Featured Items'
     
       return header
     }
+
+    function getBody() {
+      const body = document.createElement('div');
+      body.classList.add('card-body')
+    }
   };
 
-  function getFeaturedItem(itemNum) {const div = document.createElement('div');
+  function getFeaturedItem(itemNum) {
+    const div = document.createElement('div');
 
-  return div
+    return div
   };
 
   function getAmenitiesCard() {

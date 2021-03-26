@@ -1,8 +1,3 @@
-import { getHeader } from './displayHeader'
+import { Controller } from './controller'
 
-const content = document.getElementById('content')
-
-const header = getHeader()
-
-content.append(header)
-
+Controller.init();

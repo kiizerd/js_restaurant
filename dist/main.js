@@ -10,6 +10,36 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/controller.js":
+/*!***************************!*\
+  !*** ./src/controller.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Controller\": () => (/* binding */ Controller)\n/* harmony export */ });\n/* harmony import */ var _display__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./display */ \"./src/display.js\");\n\r\n\r\nconst Controller = (function () {\r\n  const content = document.getElementById('content');\r\n\r\n  function init() {\r\n    setActivePage('home')\r\n    content.setActivePage = setActivePage\r\n  }\r\n\r\n  function setActivePage(pageName) {\r\n    let page = getPage(pageName);\r\n    content.innerHTML = ''\r\n    content.append(_display__WEBPACK_IMPORTED_MODULE_0__.Display.getHeader(), page);\r\n  }\r\n\r\n  function getPage(name) {\r\n    let pages = {\r\n      'home': _display__WEBPACK_IMPORTED_MODULE_0__.Display.getHomePage(),\r\n      'menu': _display__WEBPACK_IMPORTED_MODULE_0__.Display.getMenuPage(),\r\n      'about': _display__WEBPACK_IMPORTED_MODULE_0__.Display.getAboutPage()\r\n    }\r\n    return pages[name]\r\n  }\r\n\r\n  return { init }\r\n})()\r\n\r\n\n\n//# sourceURL=webpack://restaurant/./src/controller.js?");
+
+/***/ }),
+
+/***/ "./src/display.js":
+/*!************************!*\
+  !*** ./src/display.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Display\": () => (/* binding */ Display)\n/* harmony export */ });\n/* harmony import */ var _displayHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./displayHeader */ \"./src/displayHeader.js\");\n/* harmony import */ var _displayHome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./displayHome */ \"./src/displayHome.js\");\n/* harmony import */ var _displayMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./displayMenu */ \"./src/displayMenu.js\");\n/* harmony import */ var _displayAbout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./displayAbout */ \"./src/displayAbout.js\");\n\r\n\r\n\r\n\r\n\r\nconst Display = {\r\n  getHeader: _displayHeader__WEBPACK_IMPORTED_MODULE_0__.getHeader,\r\n  getHomePage: _displayHome__WEBPACK_IMPORTED_MODULE_1__.getHomePage,\r\n  getMenuPage: _displayMenu__WEBPACK_IMPORTED_MODULE_2__.getMenuPage,\r\n  getAboutPage: _displayAbout__WEBPACK_IMPORTED_MODULE_3__.getAboutPage\r\n}\r\n\r\n\n\n//# sourceURL=webpack://restaurant/./src/display.js?");
+
+/***/ }),
+
+/***/ "./src/displayAbout.js":
+/*!*****************************!*\
+  !*** ./src/displayAbout.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getAboutPage\": () => (/* binding */ getAboutPage)\n/* harmony export */ });\nconst Display = (function() {\r\n  function getAboutPage() {\r\n    return true\r\n  }\r\n  return { getAboutPage }\r\n})()\r\n\r\nconst getAboutPage = Display.getAboutPage\r\n\r\n\n\n//# sourceURL=webpack://restaurant/./src/displayAbout.js?");
+
+/***/ }),
+
 /***/ "./src/displayHeader.js":
 /*!******************************!*\
   !*** ./src/displayHeader.js ***!
@@ -20,13 +50,33 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/displayHome.js":
+/*!****************************!*\
+  !*** ./src/displayHome.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getHomePage\": () => (/* binding */ getHomePage)\n/* harmony export */ });\nconst Display = (function () {\r\n  \r\n  function getHomePage() {\r\n    const div = document.createElement('div');\r\n    div.classList.add('container-fluid')\r\n\r\n    const cardColumn = getCardColumn();\r\n\r\n    div.append(cardColumn);\r\n\r\n    return div;\r\n  }\r\n\r\n  function getCardColumn() {\r\n    const div = document.createElement('div');\r\n    div.classList.add('card-columns');\r\n\r\n    const featured = getFeaturedCard();\r\n    const amenities = getAmenitiesCard();\r\n    const locations = getLocationsCard();\r\n\r\n    div.append(featured, amenities, locations)\r\n\r\n    return div\r\n  }\r\n\r\n  function getFeaturedCard() {\r\n    const div = document.createElement('div');\r\n    \r\n    div.append(getHeader(), getBody())\r\n        \r\n    return div\r\n\r\n    function getHeader() {\r\n      const header = document.createElement('div')\r\n      header.classList.add('card-header');\r\n      header.textContent = 'Featured Items'\r\n    \r\n      return header\r\n    }\r\n\r\n    function getBody() {\r\n      const body = document.createElement('div');\r\n      body.classList.add('card-body')\r\n    }\r\n  };\r\n\r\n  function getFeaturedItem(itemNum) {\r\n    const div = document.createElement('div');\r\n\r\n    return div\r\n  };\r\n\r\n  function getAmenitiesCard() {\r\n    const div = document.createElement('div');\r\n\r\n    return div\r\n  };\r\n  \r\n  function getLocationsCard() {\r\n    const div = document.createElement('div');\r\n\r\n    return div\r\n  };\r\n\r\n  return { getHomePage }\r\n})();\r\n\r\nconst getHomePage = Display.getHomePage;\r\n\r\n\n\n//# sourceURL=webpack://restaurant/./src/displayHome.js?");
+
+/***/ }),
+
+/***/ "./src/displayMenu.js":
+/*!****************************!*\
+  !*** ./src/displayMenu.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getMenuPage\": () => (/* binding */ getMenuPage)\n/* harmony export */ });\nconst Display = (function() {\r\n  function getMenuPage() {\r\n    return true\r\n  }\r\n  return { getMenuPage }\r\n})()\r\n\r\nconst getMenuPage = Display.getMenuPage\r\n\r\n\n\n//# sourceURL=webpack://restaurant/./src/displayMenu.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _displayHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./displayHeader */ \"./src/displayHeader.js\");\n\r\n\r\nconst content = document.getElementById('content')\r\n\r\nconst header = (0,_displayHeader__WEBPACK_IMPORTED_MODULE_0__.getHeader)()\r\n\r\ncontent.append(header)\r\n\r\n\n\n//# sourceURL=webpack://restaurant/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controller */ \"./src/controller.js\");\n\r\n\r\n_controller__WEBPACK_IMPORTED_MODULE_0__.Controller.init();\n\n//# sourceURL=webpack://restaurant/./src/index.js?");
 
 /***/ })
 
