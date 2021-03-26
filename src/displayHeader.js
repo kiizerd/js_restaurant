@@ -6,7 +6,7 @@ const Display = (function() {
     header.id = 'header';
 
     const image = document.createElement('img');
-    image.classList.add('col-3', 'col-lg-1');
+    image.classList.add('col-4', 'col-sm-1', 'col-lg-2', 'col-xl-1');
     image.src = './media/burger_0.jpg';
     image.id = 'header-icon';
   
@@ -110,7 +110,13 @@ const Display = (function() {
     link.href = '#';
     link.textContent = (item === 'home') ? 'Home' : (item === 'menu') ? 'Menu' : 'About';
     link.setAttribute('aria-current', item);
+    link.addEventListener('click', e => {navItemClick(e)})
     return link
+  };
+
+  function navItemClick(event) {
+    const content = document.getElementById('content');
+    content.setActivePage(event.target.textContent.toLowerCase())
   };
 
   return { getHeader }
