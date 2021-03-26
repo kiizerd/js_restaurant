@@ -1,5 +1,9 @@
 body {
-  background-color: coral;
+  /* background-color: coral; */
+  background-image: url("../dist/media/bg_interior.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #header {
@@ -9,4 +13,13 @@ body {
 .navbar {
   background-color: darkslategray;
   color: #eee;
+}
+
+#featured-card {
+  margin: 1em auto 1em auto;
+  background-color: #ff995a9f;
+}
+
+#featured-card-header {
+  font-weight: bold;
 }

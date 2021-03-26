@@ -26,7 +26,7 @@ const Display = (function () {
 
   function getFeaturedCard() {
     const div = document.createElement('div');
-    div.classList.add('card', 'text-white', 'bg-dark', 'mb-3')
+    div.classList.add('card', 'mb-3')
     div.id = 'featured-card'
     div.style.maxWidth = '75%' // move to stylesheet
 
@@ -34,7 +34,8 @@ const Display = (function () {
     function getCardHeader() {
       const header = document.createElement('div')
       header.classList.add('card-header');
-      header.textContent = 'Featured Items'
+      header.textContent = 'The Best Dishes'
+      header.id = 'featured-card-header'
     
       return header
     }
@@ -57,7 +58,8 @@ const Display = (function () {
 
             const img = document.createElement('img')
             img.src = "./media/featured_item" + itemNum + '.jpg'
-            img.style.maxWidth = '140px' // move to stylesheet
+            img.style.maxWidth = '160px'
+            img.style.height = '120px'
 
             imgColumn.append(img)
             return imgColumn
@@ -72,7 +74,7 @@ const Display = (function () {
             let title = document.createElement('div')
             let contents = document.createElement('div')
             title.classList.add('card-title')
-            title.textContent = 'big meel'
+            title.textContent = 'Big Meel'
             contents.classList.add('card-text')
             contents.textContent = 'the best stuff u ever had'
           
