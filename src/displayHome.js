@@ -26,12 +26,12 @@ const Display = (function () {
 
   function getFeaturedCard() {
     const div = document.createElement('div');
-    
-    div.append(getHeader(), getBody())
-        
-    return div
+    div.classList.add('card', 'text-white', 'bg-dark', 'mb-3')
+    div.id = 'featured-card'
+    div.style.maxWidth = '75%' // move to stylesheet
 
-    function getHeader() {
+    
+    function getCardHeader() {
       const header = document.createElement('div')
       header.classList.add('card-header');
       header.textContent = 'Featured Items'
@@ -39,15 +39,68 @@ const Display = (function () {
       return header
     }
 
-    function getBody() {
+    function getCardBody() {
       const body = document.createElement('div');
-      body.classList.add('card-body')
+      body.classList.add('card-body');
+
+      function getFeaturedItem(itemNum) {
+        function getItemCard() {
+          const itemCard = document.createElement('div')
+          itemCard.classList.add('card', 'mb-3', 'text-white', 'bg-dark')
+
+          const cardRow = document.createElement('div')
+          cardRow.classList.add('row', 'g-0');
+
+          function getItemImage() {
+            const imgColumn = document.createElement('div');
+            imgColumn.classList.add('col-md-3', 'col-lg-3', 'col-xl-3')
+
+            const img = document.createElement('img')
+            img.src = "./media/featured_item" + itemNum + '.jpg'
+            img.style.maxWidth = '140px' // move to stylesheet
+
+            imgColumn.append(img)
+            return imgColumn
+          }
+
+          function getItemDescription() {
+            const descColumn = document.createElement('div');
+            descColumn.classList.add('col-md-5', 'col-lg-5', 'col-xl-5')
+            const itemCardBody = document.createElement('div')
+            itemCardBody.classList.add('card-body')
+
+            let title = document.createElement('div')
+            let contents = document.createElement('div')
+            title.classList.add('card-title')
+            title.textContent = 'big meel'
+            contents.classList.add('card-text')
+            contents.textContent = 'the best stuff u ever had'
+          
+            
+            itemCardBody.append(title, contents)
+            descColumn.append(itemCardBody)
+            return descColumn
+          }
+
+          const itemImage = getItemImage()
+          const itemDescription = getItemDescription()
+
+          cardRow.append(itemImage, itemDescription)
+
+          itemCard.append(cardRow)
+          return itemCard
+        }
+
+        const item = getItemCard();
+        return item
+      }
+
+      
+      body.append(getFeaturedItem(1), getFeaturedItem(2), getFeaturedItem(3))
+      return body
     }
-  };
 
-  function getFeaturedItem(itemNum) {
-    const div = document.createElement('div');
-
+    div.append(getCardHeader(), getCardBody());
     return div
   };
 
