@@ -1,13 +1,26 @@
+html {
+	scrollbar-color: #666 coral;
+	
+}
+
 body {
-  /* background-color: coral; */
+  font-family: 'Raleway', serif;
+  background-color: coral;
+  font-size: 1.1em;
+}
+
+#content {
   background-image: url("../dist/media/bg_interior.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 155% 105%;
+  -webkit-box-shadow: 0px 0px 7px 7px #777;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0px 0px 7px 7px #777;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0px 0px 7px 7px #777;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 #header {
-  background-color: #FF985A;
+  background-color: coral;
 }
 
 .navbar {
@@ -15,11 +28,35 @@ body {
   color: #eee;
 }
 
-#featured-card {
+.homepage-cards {
   margin: 1em auto 1em auto;
   background-color: #ff995a9f;
 }
 
-#featured-card-header {
+#featured-card img {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  max-width: 100%;
+}
+
+#amenities-card img {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  max-width: 100%;
+}
+
+.card-header {
   font-weight: bold;
+  font-size: 1.1em;
+  background-color: #ff995ac1;
+}
+
+.card-title {
+  font-weight: bold;
+  font-style: italic;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
 }
