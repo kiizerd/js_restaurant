@@ -1,3 +1,5 @@
+import { Config } from "./config";
+
 const Display = (function () {
   
   function getHomePage() {
@@ -28,7 +30,6 @@ const Display = (function () {
     const div = document.createElement('div');
     div.classList.add('card', 'mb-3', 'homepage-cards')
     div.id = id
-    div.style.maxWidth = '75%' // move to stylesheet
     
     return div
   }
@@ -70,7 +71,7 @@ const Display = (function () {
 
           function getItemDescription() {
             const descColumn = document.createElement('div');
-            descColumn.classList.add('col-md-5', 'col-lg-5', 'col-xl-5')
+            descColumn.classList.add('col-md-9', 'col-lg-9', 'col-xl-9')
             const itemCardBody = document.createElement('div')
             itemCardBody.classList.add('card-body')
 
@@ -134,7 +135,7 @@ const Display = (function () {
 
           function getAmenityImage() {
             const imgColumn = document.createElement('div');
-            imgColumn.classList.add('col-md-3', 'col-lg-3', 'col-xl-3')
+            imgColumn.classList.add('col-3')
 
             const img = document.createElement('img')
             img.src = "./media/amenity_" + name + '.jpg'
@@ -145,7 +146,7 @@ const Display = (function () {
 
           function getAmenityDescription() {
             const descColumn = document.createElement('div');
-            descColumn.classList.add('col-md-9', 'col-lg-9', 'col-xl-9')
+            descColumn.classList.add('col-9')
             const amenityCardBody = document.createElement('div')
             amenityCardBody.classList.add('card-body')
 
@@ -207,7 +208,7 @@ const Display = (function () {
         map.id = 'map'
         map.frameborder = '0'
         map.style.border = '0'
-        map.src = "https://www.google.com/maps/embed/v1/view?key=AIzaSyB-YnQYv0ynl_8uTqoYfIj6QiN43t34B8Y&center=36.056595,-112.125092&zoom=8&maptype=satellite"
+        map.src = "https://www.google.com/maps/embed/v1/view?key=" + Config.key + "&center=36.056595,-112.125092&zoom=8&maptype=satellite"
         
         return map
       }

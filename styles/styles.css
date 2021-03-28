@@ -9,6 +9,10 @@ body {
   font-size: 1.1em;
 }
 
+.container-fluid {
+  padding: 0;
+}
+
 #content {
   background-image: url("../dist/media/bg_interior.jpg");
   background-position: center;
@@ -33,16 +37,57 @@ body {
   background-color: #ff995a9f;
 }
 
+@media only screen and (min-width: 360px) {
+
+  #featured-card .row > * {
+    width: auto;
+  }
+  
+  .homepage-cards {
+    max-width: 95%;
+  }
+
+  .card-columns img {
+    height: 17vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .card-columns img {
+    height: 13vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card-columns img {
+    height: 12vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  
+  .homepage-cards {
+    max-width: 75%;
+  }
+  
+  .card-columns img {
+    height: 8vw;
+  }
+}
+  
 #featured-card img {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  max-width: 100%;
+}
+
+#amenities-card .col-3 {
+  display: flex;
+  justify-content: flex-end;
 }
 
 #amenities-card img {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  max-width: 100%;
 }
 
 .card-header {
