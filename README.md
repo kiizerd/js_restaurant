@@ -2,7 +2,7 @@
 ### made with Javascript, built with webpack
 [Link to site](https://kiizerd.github.io/js_restaurant/dist/#)
 
-Simple webpage with 3 pages
+Simple website with 3 pages
 1. The Home page
   - Contains featured items (Placeholder content)
   - Shows special features of the restaurant
