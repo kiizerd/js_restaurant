@@ -5,8 +5,10 @@ const Display = (function() {
     header.classList.add('row');
     header.id = 'header';
 
+    //  Replace image with header images in media folder
+    //  
     const image = document.createElement('img');
-    image.classList.add('col-4', 'col-sm-1', 'col-lg-2', 'col-xl-1');
+    image.classList.add('col-3', 'col-xs-2', 'col-sm-3', 'col-md-3', 'col-lg-2','col-xl-2', 'col-xxl-1');
     image.src = './media/burger_0.jpg';
     image.id = 'header-icon';
   
@@ -24,10 +26,19 @@ const Display = (function() {
     const navContainer = getNavContainer();
   
     nav.append(navContainer);
+    
+    let navOffset = nav.offsetTop;
+    window.onscroll = function() {
+      if (window.pageYOffset > navOffset) {
+        nav.classList.add('sticky');
+      } else {
+        nav.classList.remove('sticky');
+      }
+    }
   
     return nav
   };
-
+  
   function getNavContainer() {
     const div = document.createElement('div');
     div.classList.add('container-fluid');
