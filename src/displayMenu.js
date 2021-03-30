@@ -40,14 +40,17 @@ const Display = (function() {
     const subListHeader = document.createElement('div');
     subListHeader.classList.add('card-header');
     subListHeader.textContent = section[0].toUpperCase() + section.slice(1);    
-    subList.append(subListHeader);
+    
+    const subListBody = document.createElement('div')
+    subListBody.classList.add('card-body')
+    subList.append(subListHeader, subListBody);
 
     let items = Menu.getItems(section);
-
+    
     for (let item in items) {
       const subListItem = getSubListItem(items[item]);
-
-      subList.append(subListItem);
+      
+      subListBody.append(subListItem);
     }
 
     function getSubListItem(foodItem) {
