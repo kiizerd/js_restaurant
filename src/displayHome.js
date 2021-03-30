@@ -28,7 +28,7 @@ const Display = (function () {
 
   function createCard(id) {
     const div = document.createElement('div');
-    div.classList.add('card', 'mb-3', 'homepage-cards')
+    div.classList.add('card', 'homepage-cards')
     div.id = id
     
     return div
