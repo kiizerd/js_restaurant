@@ -3,6 +3,11 @@ html {
 	
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Raleway', serif;
   background-color: coral;
@@ -27,52 +32,37 @@ body {
   background-color: coral;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
 .navbar {
   background-color: darkslategray;
   color: #eee;
+  width: 100%;
+}
+
+.navbar-brand {
+  margin: 0 1vh 0 1vh;
 }
 
 .homepage-cards {
-  margin: 1em auto 1em auto;
+  margin: 2vw auto 2vw auto;
   background-color: #ff995a9f;
 }
 
-@media only screen and (min-width: 360px) {
-
-  #featured-card .row > * {
-    width: auto;
-  }
-  
-  .homepage-cards {
-    max-width: 95%;
-  }
-
-  .card-columns img {
-    height: 17vw;
-  }
+.section-cards {
+  margin: 2vw auto 2vw auto;
+  background-color: #ff995a9f;
 }
 
-@media only screen and (min-width: 1000px) {
-  .card-columns img {
-    height: 13vw;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .card-columns img {
-    height: 12vw;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  
-  .homepage-cards {
-    max-width: 75%;
-  }
-  
-  .card-columns img {
-    height: 8vw;
-  }
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
   
 #featured-card img {
@@ -104,4 +94,54 @@ body {
 #map {
   height: 400px;
   width: 100%;
+}
+
+
+@media only screen and (min-width: 360px) {
+
+  #featured-card .row > * {
+    width: auto;
+  }
+  
+  .homepage-cards {
+    max-width: 95%;
+  }
+
+  .section-cards {
+    max-width: 95%;
+  }
+
+  .card-columns img {
+    height: 17vw;
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .card-columns img {
+    height: 13vw;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .card-columns img {
+    height: 12vw;
+  }
+}
+
+
+@media only screen and (min-width: 1600px) {
+  
+  .homepage-cards {
+    max-width: 75%;
+  }
+
+  .section-cards {
+    max-width: 75%;
+  }
+  
+  .card-columns img {
+    height: 8vw;
+  }
 }
