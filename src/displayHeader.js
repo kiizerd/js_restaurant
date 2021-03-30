@@ -127,7 +127,7 @@ const Display = (function() {
 
   function navItemClick(event) {
     const content = document.getElementById('content');
-    content.setActivePage(event.target.textContent.toLowerCase())
+    content.setActivePage(event.target.textContent.toLowerCase());
   };
 
   return { getHeader }
