@@ -23,9 +23,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 155% 105%;
-  -webkit-box-shadow: 0px 0px 7px 7px #777;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    0px 0px 7px 7px #777;  /* Firefox 3.5 - 3.6 */
-  box-shadow:         0px 0px 7px 7px #777;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  padding: 0 0 1rem 0;
+  -webkit-box-shadow: 0px -3em 7px 7px #777;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0px -3em 7px 7px #777;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0px -3em 7px 7px #777;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 #header {
@@ -55,6 +56,11 @@ body {
 }
 
 .section-cards {
+  margin: 2vw auto 2vw auto;
+  background-color: #ff995a9f;
+}
+
+.about-cards {
   margin: 2vw auto 2vw auto;
   background-color: #ff995a9f;
 }
@@ -91,6 +97,11 @@ ul {
   font-style: italic;
 }
 
+#description-card {
+  white-space: pre-line;
+  padding: 1em 1em 1em 1em;
+}
+
 #map {
   height: 400px;
   width: 100%;
@@ -111,8 +122,37 @@ ul {
     max-width: 95%;
   }
 
+  .section-cards .card-body {
+    padding: .1em;
+  }
+
+  .about-cards {
+    max-width: 95%;
+  }
+
   .card-columns img {
     height: 17vw;
+  }
+
+  .food-item-cards {
+    max-height: 13vh;
+    font-size: .8em;
+  }
+
+  .food-item-cards .card-body {
+    padding: .2rem;
+  }
+
+  .food-item-cards .card-body h5 {
+    margin-bottom: 0;
+  }
+  
+  .food-item-cards .card-body h6 {
+    margin-bottom: 0;
+  }
+  
+  .food-item-cards .card-body p {
+    margin-bottom: 0;
   }
 }
 
@@ -138,6 +178,10 @@ ul {
   }
 
   .section-cards {
+    max-width: 75%;
+  }
+
+  .about-cards {
     max-width: 75%;
   }
   

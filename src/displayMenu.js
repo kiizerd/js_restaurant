@@ -3,7 +3,6 @@ import { Menu } from './menu'
 const Display = (function() {
   function getMenuPage() {
     const div = document.createElement('div');
-    
     div.classList.add('container-fluid');
   
     div.append(getList())
